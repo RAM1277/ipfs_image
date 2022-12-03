@@ -25,7 +25,7 @@ const App = () => {
     try {
       setIsLoading(true)
       client.put(file, {
-        name: 'cat pic',
+        name: new Date().getTime(),
         maxRetries: 3,
       }).then((cid) => {
           setCid(cid);
